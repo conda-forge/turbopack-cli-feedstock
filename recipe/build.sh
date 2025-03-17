@@ -3,7 +3,11 @@
 set -o xtrace -o nounset -o pipefail -o errexit
 
 export CARGO_PROFILE_RELEASE_STRIP=symbols
-export CARGO_PROFILE_RELEASE_LTO=fat
+if [[ ${target_platform} =~ .*linux.* ]]; then
+    export CARGO_PROFILE_RELEASE_LTO=thin
+else
+    export CARGO_PROFILE_RELEASE_LTO=fat
+fi
 export RUSTC_BOOTSTRAP=1
 export OPENSSL_DIR=${PREFIX}
 export OPENSSL_NO_VENDOR=1
