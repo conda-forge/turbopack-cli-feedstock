@@ -1,5 +1,5 @@
 context:
-  version: "15.5.2"
+  version: "15.5.3"
 
 package:
   name: turbopack-cli
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/vercel/next.js/archive/v${{ version }}.tar.gz
-  sha256: 15c949de712af1758987bfd0754e6ae7302694667b9999f38556d688e413ed96
+  sha256: d19fb2ae9573c9e4d0ed8dc629647a95a8e8be685530d978b703f057aed65ef9
 
 build:
   number: 0
